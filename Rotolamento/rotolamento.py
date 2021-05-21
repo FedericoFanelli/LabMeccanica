@@ -97,7 +97,7 @@ def get_angle_from_data(file_name,nmis):
     
     # media e deviazione standard campionaria
     mean_angle = angle.mean()
-    smean_angle = np.std(angle,ddof=1)/nmis #divido per il numero di misurazioni
+    smean_angle = np.std(angle,ddof=1)/np.sqrt(nmis) #divido per il numero di misurazioni
     
     PrintResult("Angolo",mean_angle,smean_angle,3,"[Rad]" )
     
